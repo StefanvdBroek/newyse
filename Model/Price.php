@@ -25,6 +25,11 @@ class Price
     protected $referencePriceInclusive;
 
     /**
+     * @var float
+     */
+    protected $referencePrice;
+
+    /**
      * @var \DateTime
      */
     protected $arrivalDate;
@@ -91,6 +96,24 @@ class Price
     public function getReferencePriceInclusive()
     {
         return $this->referencePriceInclusive;
+    }
+
+    /**
+     * @param float $referencePrice
+     * @return Price
+     */
+    public function setReferencePrice($referencePrice)
+    {
+        $this->referencePrice = $referencePrice;
+        return $this;
+    }
+
+    /**
+     * @return float
+     */
+    public function getReferencePrice()
+    {
+        return $this->referencePrice;
     }
 
     /**
